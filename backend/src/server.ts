@@ -12,11 +12,11 @@ import { createMocks } from "./database/mock";
 import dotenv from "dotenv";
 import path from "path";
 import { IBuildSchemaOptions, redis } from "./plugins/redis";
-import { logger } from "./plugins/logging";
+import { ilogger } from "./plugins/logging";
 
 dotenv.config();
 
-createConnection()/
+createConnection()
 	.then(async (connection) => {
 		createMocks(connection);
 	})
