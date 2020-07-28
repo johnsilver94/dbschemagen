@@ -39,13 +39,31 @@
 		"frontend",
 		"backend"
 	],
+	"engines": {
+		"yarn": ">=1.12.4",
+		"node": ">=12.18.2"
+	},
 	"scripts": {
 		"bootstrap": "lerna bootstrap",
 		"dev": "lerna run dev --stream",
 		"prod": "lerna run prod --stream",
-		"build": "lerna run build --stream"
+		"build": "lerna run build --stream",
+		"lint": "lerna run lint --stream",
+		"prettier": "lerna run prettier --stream"
+	},
+	"lint-staged": {
+		"**/*.{js,ts,vue,json,scss}": [
+			"yarn lint",
+			"yarn prettier",
+			"git add"
+		]
 	},
 	"devDependencies": {
-		"lerna": "^3.22.1"
+		"husky": "^4.2.5",
+		"lerna": "^3.22.1",
+		"lint-staged": "^10.2.11"
+	},
+	"dependencies": {
+		"prettier": "^2.0.5"
 	}
 }
