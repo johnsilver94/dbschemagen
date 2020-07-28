@@ -1,0 +1,51 @@
+{
+	"name": "dbschemagen",
+	"version": "0.0.1",
+	"main": "index.js",
+	"private": true,
+	"description": "",
+	"keywords": [
+		"yarn",
+		"nodemon",
+		"eslint",
+		"prettier",
+		"webpack",
+		"graphql",
+		"apollo",
+		"apollo-server",
+		"typescript",
+		"mongo",
+		"docker",
+		"docker-compose",
+		"svg",
+		"database",
+		"db",
+		"schema",
+		"diagram",
+		"generator",
+		"gen"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/johnsilver94/dbschemagen.git"
+	},
+	"bugs": {
+		"url": "https://github.com/johnsilver94/dbschemagen/issues"
+	},
+	"homepage": "https://github.com/johnsilver94/dbschemagen#readme",
+	"author": "Ion Cretu <cretuion94@gmail.com>",
+	"license": "MIT",
+	"workspaces": [
+		"frontend",
+		"backend"
+	],
+	"scripts": {
+		"bootstrap": "lerna bootstrap",
+		"dev": "lerna run dev --stream",
+		"prod": "lerna run prod --stream",
+		"build": "lerna run build --stream"
+	},
+	"devDependencies": {
+		"lerna": "^3.22.1"
+	}
+}

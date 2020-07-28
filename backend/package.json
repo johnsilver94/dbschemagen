@@ -1,0 +1,81 @@
+{
+	"name": "dbschemagen-backend",
+	"version": "0.0.1",
+	"description": "Awesome project developed with TypeORM.",
+	"author": "Ion Cretu <cretuion94@gmail.com>",
+	"homepage": "https://github.com/johnsilver94/dbschemagen/tree/master/mr#readme",
+	"license": "MIT",
+	"private": true,
+	"main": "src/server.ts",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/johnsilver94/dbschemagen.git"
+	},
+	"bugs": {
+		"url": "https://github.com/johnsilver94/dbschemagen/issues"
+	},
+	"scripts": {
+		"dev": "nodemon --watch src/**/*.ts --exec ts-node src/server.ts",
+		"prod": "set NODE_ENV=production&&node dist/server.js",
+		"build": "tsc",
+		"build:types": "tsc --emitDeclarationOnly",
+		"build:webpack": "set NODE_ENV=production&&webpack --colors --progress --display-error-details",
+		"lint": "eslint src/**/*.ts",
+		"lint:fix": "eslint src/**/*.ts --fix",
+		"prettier": "prettier src/**/*.ts --write ."
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"**/*.{ts,js}": [
+			"eslint --fix",
+			"prettier --write",
+			"git add"
+		]
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.7",
+		"@types/node": "^8.0.29",
+		"@typescript-eslint/eslint-plugin": "^3.7.0",
+		"@typescript-eslint/parser": "^3.7.0",
+		"clean-webpack-plugin": "^3.0.0",
+		"eslint": "^7.5.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-config-standard": "^14.1.1",
+		"eslint-plugin-import": "^2.22.0",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-promise": "^4.2.1",
+		"eslint-plugin-standard": "^4.0.1",
+		"husky": "^4.2.5",
+		"lint-staged": "^10.2.11",
+		"nodemon": "^2.0.4",
+		"prettier": "2.0.5",
+		"prettier-eslint": "^11.0.0",
+		"ts-loader": "^8.0.1",
+		"ts-node": "3.3.0",
+		"typescript": "3.3.3333",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.12",
+		"webpack-node-externals": "^2.5.0"
+	},
+	"dependencies": {
+		"@types/ioredis": "^4.17.2",
+		"apollo-server-express": "^2.16.0",
+		"body-parser": "^1.18.1",
+		"class-transformer": "^0.2.3",
+		"class-validator": "^0.12.2",
+		"dotenv": "^8.2.0",
+		"express": "^4.15.4",
+		"graphql": "^15.3.0",
+		"graphql-redis-subscriptions": "^2.2.1",
+		"graphql-subscriptions": "^1.1.0",
+		"ioredis": "^4.17.3",
+		"mongodb": "^3.0.8",
+		"reflect-metadata": "^0.1.10",
+		"type-graphql": "^1.0.0-rc.3",
+		"typeorm": "0.2.25"
+	}
+}

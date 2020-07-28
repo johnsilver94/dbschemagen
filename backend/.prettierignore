@@ -1,0 +1,8 @@
+node_modules/
+dist/
+migrations/
+docker-compose.yml
+yarn.lock
+README.md
+.eslintignore
+.prettierignore
