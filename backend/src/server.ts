@@ -1,5 +1,4 @@
 import "reflect-metadata";
-import { createConnection } from "typeorm";
 import express from "express";
 import bodyParser from "body-parser";
 import { Request, Response } from "express";
@@ -8,19 +7,15 @@ import { ApolloServer } from "apollo-server-express";
 import { buildSchema } from "type-graphql";
 import { BookResolver } from "./controllers/book.resolver";
 import { RecipeResolver } from "./controllers/recipe.resolver";
-import { createMocks } from "./database/mock";
 import dotenv from "dotenv";
 import path from "path";
 import { IBuildSchemaOptions, redis } from "./plugins/redis";
 import { logger } from "./plugins/logging";
+import { connection } from "./database";
 
 dotenv.config();
 
-createConnection()
-	.then(async (connection) => {
-		createMocks(connection);
-	})
-	.catch((error) => console.log(error));
+connection();
 
 async function initServer() {
 	// create express app
