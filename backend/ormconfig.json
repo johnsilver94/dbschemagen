@@ -5,7 +5,7 @@
   "database": "typeorm",
   "synchronize": true,
   "logging": true,
-  "entities": ["dist/models/**/*.js", "dist/models/**/*.ts"],
+  "entities": ["dist/models/**/*.js", "src/models/**/*.ts"],
   "migrations": [
     "dist/database/migrations/**/*.js",
     "src/database/migrations/**/*.ts"

@@ -35,10 +35,6 @@
 	"homepage": "https://github.com/johnsilver94/dbschemagen#readme",
 	"author": "Ion Cretu <cretuion94@gmail.com>",
 	"license": "MIT",
-	"workspaces": [
-		"frontend",
-		"backend"
-	],
 	"engines": {
 		"yarn": ">=1.12.4",
 		"node": ">=12.18.2"
