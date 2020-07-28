@@ -16,7 +16,7 @@ import { logger } from "./plugins/logging";
 
 dotenv.config();
 
-createConnection()
+createConnection()/
 	.then(async (connection) => {
 		createMocks(connection);
 	})
@@ -28,7 +28,7 @@ async function initServer() {
 	app.use(bodyParser.json());
 
 	// register express routes from defined application routes
-	Routes./forEach((route) => {
+	Routes.forEach((route) => {
 		(app as any)[route.method](
 			route.route,
 			(req: Request, res: Response, next: Function) => {
