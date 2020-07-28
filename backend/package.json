@@ -23,6 +23,18 @@
 		"lint": "eslint **/*.{ts,js} --fix",
 		"prettier": "prettier **/*.{ts,js} --write ."
 	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"**/*.{ts,js}": [
+			"yarn lint",
+			"yarn prettier",
+			"git add"
+		]
+	},
 	"devDependencies": {
 		"@types/express": "^4.17.7",
 		"@types/node": "^8.0.29",
