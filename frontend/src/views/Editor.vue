@@ -98,7 +98,11 @@
           </template>
           <v-card tile>
             <v-list outlined dense>
-              <v-list-item v-for="(lang, index) in langs" :key="index" @click="setLang(index)">
+              <v-list-item
+                v-for="(lang, index) in langs"
+                :key="index"
+                @click="setLang(index)"
+              >
                 <v-list-item-title>{{ lang.long }}</v-list-item-title>
               </v-list-item>
             </v-list>
