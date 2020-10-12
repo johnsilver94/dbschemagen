@@ -9,9 +9,9 @@ import vuetify from "./plugins/vuetify";
 Vue.config.productionTip = false;
 
 new Vue({
-	router,
-	store,
-	i18n,
-	vuetify,
-	render: h => h(App)
+  router,
+  store,
+  i18n,
+  vuetify,
+  render: h => h(App)
 }).$mount("#app");
