@@ -4,14 +4,14 @@
     <HelloI18n />
   </div>
 </template>
-<script>
-// @ is an alias to /src
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
 import HelloI18n from "@/components/HelloI18n.vue";
 
-export default {
-  name: "Home",
+@Component({
   components: {
     HelloI18n
   }
-};
+})
+export default class About extends Vue {}
 </script>

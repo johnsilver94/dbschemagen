@@ -1,4 +1,5 @@
 {
+  "hello": "Hello i18n in SFC!",
   "navbar": {
     "login": "Logare",
     "language": "Language",
