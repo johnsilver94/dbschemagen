@@ -1,8 +1,11 @@
 {
-    "Heart": "Inima",
-    "Search": "Cautare",
-    "Options": "Optiuni",
-    "login":"Logare",
-    "navbar": {"login":"Logare"}
+  "navbar": {
+    "login": "Logare",
+    "language": "Language",
+    "theme": "Theme",
+    "access": { "title": "Access", "public": "public", "private": "privat" },
+    "share": "Share",
+    "export": "Export",
+    "user": "User"
   }
-  
+}

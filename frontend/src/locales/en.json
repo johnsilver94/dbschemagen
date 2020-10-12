@@ -3,9 +3,14 @@
     "login": "Login",
     "language": "Language",
     "theme": "Theme",
-    "access": "Access",
+    "access": { "title": "Access", "public": "public", "private": "private" },
     "share": "Share",
     "export": "Export",
-    "user": "User"
+    "user": "User",
+    "schemas": "Schemas",
+    "save": "Save",
+    "saved": "Saved",
+    "edit": "Edit",
+    "remove": "Remove"
   }
 }
